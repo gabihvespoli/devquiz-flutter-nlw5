@@ -5,46 +5,47 @@ import 'package:flutter/material.dart';
 
 class AppBarWidget extends PreferredSize {
   AppBarWidget()
-      : super(preferredSize: Size.fromHeight(250), child: Container(
-        height: 250,
-        child: Stack(
-          children: [
-            Container(
-              height: 161,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              width: double.maxFinite,
-              decoration: BoxDecoration(gradient: AppGradients.linear),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      : super(
+            preferredSize: Size.fromHeight(250),
+            child: Container(
+              height: 250,
+              child: Stack(
                 children: [
-                Text.rich(TextSpan(
-                  text: "Olá, ",
-                  style: AppTextStyles.title,
-                  children: [
-                    TextSpan(
-                      text: "Gabi!",
-                      style: AppTextStyles.titleBold,
-                    )
-                  ],
-                )),
-                Container(
-                  width: 58,
-                  height: 58,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
-                      image: NetworkImage(
-                      "https://media-exp1.licdn.com/dms/image/C4E03AQGSWTlTV471zg/profile-displayphoto-shrink_200_200/0/1516692296345?e=1620864000&v=beta&t=y7ZbTn20Y6KrlLRTN-qvZk1rigkRXBaeIKCGkqcJzVw"),
+                  Container(
+                    height: 161,
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    width: double.maxFinite,
+                    decoration: BoxDecoration(gradient: AppGradients.linear),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text.rich(TextSpan(
+                          text: "Olá, ",
+                          style: AppTextStyles.title,
+                          children: [
+                            TextSpan(
+                              text: "Gabi!",
+                              style: AppTextStyles.titleBold,
+                            )
+                          ],
+                        )),
+                        Container(
+                          width: 58,
+                          height: 58,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                  "https://media-exp1.licdn.com/dms/image/C4E03AQGSWTlTV471zg/profile-displayphoto-shrink_200_200/0/1516692296345?e=1620864000&v=beta&t=y7ZbTn20Y6KrlLRTN-qvZk1rigkRXBaeIKCGkqcJzVw"),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                )
-              ],
+                  Align(
+                      alignment: Alignment(0.0, 1.0), child: ScoreCardWidget())
+                ],
               ),
-            ),
-            Align(
-              alignment: Alignment(0.0, 1.0),
-              child: ScoreCardWidget())
-          ],
-        ),
-      ));
+            ));
 }
