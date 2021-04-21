@@ -15,13 +15,13 @@ on your machine, see https://flutter.dev/docs/get-started/install
 $ git clone https://github.com/gabihvespoli/devquiz-flutter-nlw5.git
 ```
 
-- Enter in directory:
+- Change directory:
 
 ```
 $ cd devquiz
 ```
 
-- For install dependencies:
+- Install dependencies:
 
 ```
 $ flutter pub get
